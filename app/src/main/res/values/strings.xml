@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Kamus Bahasa Isyarat</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
+    <string name="map">Map</string>
+    <string name="ada_yang_error">Ada yang Error</string>
+    <string name="data_kosong">Data Kosong</string>
+    <string name="detail_kamus">Detail Kamus Activity</string>
+    <string name="title_maps">Maps</string>
+    <string name="navigation_buka">Membuka Navigasi</string>
+    <string name="navigation_tutup">Menutup Navigasi</string>
+    <string name="title_favorite">Favorite</string>
+</resources>

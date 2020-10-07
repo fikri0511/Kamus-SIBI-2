@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ini_adalah_gambar">ini adalah gambar</string>
+    <string name="text_judul">Judul</string>
+    <string name="text_deskripsi">Deskripsi Singkat</string>
+</resources>
