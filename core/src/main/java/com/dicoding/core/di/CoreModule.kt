@@ -8,6 +8,8 @@ import com.dicoding.core.data.remote.RemoteDataSource
 import com.dicoding.core.data.remote.network.ApiService
 import com.dicoding.core.domain.repository.IKamusRepository
 import com.dicoding.core.utils.AppExecutors
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.ext.koin.androidContext
@@ -19,10 +21,13 @@ import java.util.concurrent.TimeUnit
 val databaseModule = module {
     factory { get<KamusDatabase>().kamusDao() }
     single {
+        val passphrase:ByteArray = SQLiteDatabase.getBytes("dicoding".toCharArray())
+        val factory = SupportFactory(passphrase)
         Room.databaseBuilder(
             androidContext(),
             KamusDatabase::class.java, "Kamus.db"
-        ).fallbackToDestructiveMigration().build()
+        ).fallbackToDestructiveMigration().
+            openHelperFactory(factory).build()
     }
 }
 

@@ -48,4 +48,10 @@ dependencies {
     //dynamic feature
     implementation "androidx.navigation:navigation-dynamic-features-fragment:2.3.0"
 
+    //leak canary
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
+
+    //SQLCipher
+    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+    implementation "androidx.sqlite:sqlite:2.1.0"
 }
