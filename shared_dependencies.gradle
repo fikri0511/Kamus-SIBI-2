@@ -17,4 +17,7 @@ dependencies {
     implementation "org.koin:koin-core:2.1.5"
     implementation "org.koin:koin-android:2.1.5"
     implementation "org.koin:koin-android-viewmodel:2.1.5"
+
+    //shimer atau berkilau
+    implementation "com.facebook.shimmer:shimmer:0.5.0"
 }

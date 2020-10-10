@@ -19,7 +19,11 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -52,6 +56,7 @@ dependencies {
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.4'
 
     //SQLCipher
-    implementation "net.zetetic:android-database-sqlcipher:4.4.0"
+    implementation 'net.zetetic:android-database-sqlcipher:4.4.0@aar'
     implementation "androidx.sqlite:sqlite:2.1.0"
+
 }
