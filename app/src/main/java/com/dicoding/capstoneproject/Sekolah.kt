@@ -8,5 +8,6 @@ data class Sekolah(
     val name: String,
     val address: String,
     val latitude: Double,
-    val longitude: Double
+    val longitude: Double,
+    val image : Int
 ) : Parcelable

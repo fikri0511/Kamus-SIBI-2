@@ -24,7 +24,7 @@ class FavoriteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         loadKoinModules(favoriteModule)
-
+        activity?.title = "Favorite Kata"
         return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
 
@@ -52,4 +52,6 @@ class FavoriteFragment : Fragment() {
             }
         }
     }
+
+
 }
